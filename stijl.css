@@ -1,0 +1,405 @@
+body{
+  line-height: 2rem;
+  font-family: open sans;
+
+}
+header{
+  background: linear-gradient(130deg, white 40%, lightgrey, grey , #303030);
+  height: 7rem;
+  border-bottom: 3PX solid black;
+}
+h1{
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap;
+  padding: 2rem;
+  font-size: 2rem;
+  animation: showup 3s  forwards;
+}
+
+svg {
+    display: block;
+    font: 7rem 'Montserrat';
+    width: 420px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: -5rem;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+	stroke: black;
+	animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+	stroke: grey;
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+	stroke: lightgrey;
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+	stroke: black;
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+	stroke: grey;
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+.contact{
+  width: 86%;
+  padding-top: 8rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  height: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  margin-top: 150px;
+  border: 3px solid black;
+  text-align: center;
+
+}
+
+.achternaam{
+  display:inline-block;
+overflow:hidden;
+white-space:nowrap;
+  animation: reveal 3s  forwards;
+}
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:355px;}
+    100% {opacity:1;}
+}
+span{
+  margin-left:-355px;
+  animation: slidein 3s forwards;
+}
+@keyframes slidein {
+    0% { margin-left: -800px; }
+    100% { margin-left:0px; }
+  }
+h2{
+  margin-right: auto;
+  margin-left: 80%;
+  color: white;
+  margin-top: -47px;
+  margin-bottom: 5px;
+  font-size: 0.8rem;
+  color: white;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+.homepage{
+  height: 1500px;
+  color: black;
+  font-size: 1.2rem;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  border :1px solid black;
+  animation : background-change 5s linear infinite;
+}
+.contactpage{
+  height: 820px;
+  color: black;
+  font-size: 1.2rem;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  border :1px solid black;
+  animation : background-change 5s linear infinite;
+}
+.Photoshop{
+  margin-top: 5rem;
+  position: relative;
+  height: 17.5rem;
+  background-color: white;
+}
+.Photoshop p{
+  padding-top: 15rem;
+  padding-left: 2rem;
+  border-bottom: 3px solid black;
+}
+.Atts{
+  position: relative;
+  margin-top: 5rem;
+  height: 17.5rem;
+  background-color: white;
+}
+.Atts p{
+  padding-top: 9rem;
+  padding-left: 2rem;
+  border-bottom: 3px solid black;
+
+}
+.Silhouetten{
+  position: relative;
+  margin-top: 5rem;
+  height: 17.5rem;
+  background-color: white;
+}
+.Silhouetten P{
+  padding-top: 15rem;
+  padding-left: 2rem;
+  border-bottom: 3px solid black;
+}
+.Ftf{
+  position: relative;
+  margin-top: 5rem;
+  height: 17.5rem;
+  background-color: white;
+}
+.Ftf p{
+  padding-top: 15rem;
+  padding-left: 2rem;
+  border-bottom: 3px solid black;
+}
+.overlay {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  right: 0;
+  height: 0;
+  overflow: hidden;
+  transition: .5s ease;
+}
+.Photoshop:hover .overlay {
+  height: 97.5%;
+}
+
+.Atts:hover .overlay {
+  height: 97.5%;
+}
+.Silhouetten:hover .overlay{
+  height: 97.5%;
+}
+.Ftf:hover .overlay{
+  height: 97.5%;
+}
+.image {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  width: 50%;
+ -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-left: 3px solid black;
+}
+@keyframes background-change {
+  0%{
+    background: repeating-linear-gradient(45deg,white,black 5px, white 10px, black 5px);
+  }
+  50%{
+    background: repeating-linear-gradient(-45deg,white,black 5px, white 10px, black 5px);
+  }
+  100%{
+    background: repeating-linear-gradient(45deg,white,black 5px, white 10px, black 5px);
+  }
+}
+.posterGD{
+  width: 100%;
+}
+
+@media only screen and (min-width:700px){
+  .homepage{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 820px;
+    grid-gap:4rem;
+  }
+  .Photoshop{
+    margin-left: 2rem;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .Atts{
+    margin-right: 2rem;
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .Silhouetten{
+    margin-left: 2rem;
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .Ftf{
+    margin-right: 2rem;
+    grid-column: 2;
+    grid-row: 2;
+  }
+  h2{
+    margin-left: 90%;
+    font-size: 1rem;
+  }
+  svg{
+    width: 700px;
+  }
+  .PortfATTS{
+    background-color: grey;
+    height: 784px;
+    padding-top: 3rem;
+  }
+  .ATTSPortf{
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: 750px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    background-color: grey;
+  }
+  .ATTSPortf div{
+    background-color: grey;
+  }
+  .ATTSPortf img{
+    display: none;
+  }
+  #typografische{
+    background-image: url("fotos/TypografischePoster.png");
+    grid-row: 1/4;
+    grid-column: 1;
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-right: 3px solid white;
+    border-bottom: 3px solid white
+  }
+  #fotografische{
+    background-image: url("fotos/posterGD.jpg");
+    grid-row: 3/6;
+    grid-column: 2;
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-right: 3px solid white;
+    border-left: 3px solid white;
+  }
+  #disk{
+    background-image: url("fotos/diskGD.jpg");
+    grid-column: 5;
+    grid-row: 3/5;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-left: 3px solid white;
+    border-bottom: 3px solid white;
+  }
+  #hoes{
+    border-left: 3px solid white;
+    background-image: url("fotos/hoes GD_Page_1.jpg ");
+    grid-column: 3/5;
+    grid-row: 2/4;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-top: 3px solid white;
+    border-right: 3px solid white;
+  }
+  .LeftBorder{
+    border-left: 3px solid white;
+  }
+  .RightBorder{
+    border-right: 3px solid white;
+  }
+  .TopBorder{
+    border-top: 3px solid white;
+  }
+  .BottomBorder{
+    border-bottom: 3px solid white;
+  }
+}
+@media only screen and (min-width:1400px){
+  .homepage{
+    padding-left: 5%;
+    display: grid;
+    grid-template-columns :22% 20% 20% 20%;
+    grid-template-rows: 1fr;
+    height: 750px;
+    grid-gap: 5%;
+    padding-top: 5rem;
+  }
+  .Photoshop{
+    grid-column:  1;
+    height: 70%;
+    margin: 0;
+  }
+  .Photoshop:hover {
+    animation: backgroundblack linear 0.5s forwards;
+  }
+  .Atts{
+    grid-column:  2;
+    height: 70%;
+    margin: 0;
+  }
+  .Silhouetten{
+    grid-column: 3;
+    grid-row: 1;
+    height: 70%;
+    margin: 0;
+  }
+  .Silhouetten:hover{
+    animation: backgroundblack linear 0.5s forwards;
+  }
+  .Ftf{
+    grid-column: 4;
+    grid-row: 1;
+    height: 70%;
+    margin: 0;
+  }
+  .image{
+    height: 100%;
+    width: auto;
+    left: 50%;
+  }
+  .overlay{
+    bottom: 0;
+  }
+  svg{
+    width: 1200px;
+  }
+  .contact{
+    width: 1400px;
+    height: 400px;
+  }
+  h2{
+    margin-left: 90%;
+    font-size: 2rem;
+  }
+  .contactpage{
+    height:830px;
+    }
+  @keyframes backgroundblack {
+    0%{
+      background-color: white;
+    }
+    100%{
+      background-color: black;
+    }
+
+}
